@@ -1,19 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { Error } from "./routes/Error"
-import App from "./App"
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <Error />,
-  },
-]);
+import { RouterProvider } from "react-router-dom"
+import { Spinning } from "./routes/Spinning"
+import { router } from "./routes/router"
+import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} fallbackElement={<Spinning />} />
   </React.StrictMode>
 )

@@ -1,1 +1,3 @@
-export type Null = {}
+export interface SimpleNavbarProps {
+  
+}

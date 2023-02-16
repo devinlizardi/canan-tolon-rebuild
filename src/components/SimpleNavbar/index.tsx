@@ -1,18 +1,19 @@
+import { NavLink } from "react-router-dom"
 import { Disclosure } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+import { SimpleNavbarProps } from "./types"
 
 const navigation = [
-  { name: "home", href: "#", current: true },
-  { name: "work", href: "#", current: false },
-  { name: "biography", href: "#", current: false },
-  { name: "exhibitions", href: "#", current: false },
-  { name: "publications", href: "#", current: false },
-  { name: "contact", href: "#", current: false },
+  { name: "home", href: "/"},
+  { name: "work", href: "/work"},
+  { name: "biography", href: "/biography"},
+  { name: "exhibitions", href: "/exhibitions"},
+  { name: "publications", href: "/publications"},
+  { name: "contact", href: "/contact"},
 ]
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
-}
+const activeClassName = "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+const passiveClassName = "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 
 function SimpleNavbar() {
   return (
@@ -36,17 +37,15 @@ function SimpleNavbar() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
+                        to={item.href}
+                        className={({ isActive }) =>
+                          isActive ? activeClassName : passiveClassName
+                        }
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -55,20 +54,17 @@ function SimpleNavbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3">
+            <div className="space-y-1 px-2 pt-2 pb-3 flex flex-col">
               {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
+                <NavLink
+                key={item.name}
+                to={item.href}
+                className={({ isActive }) =>
+                  isActive ? activeClassName : passiveClassName
+                }
+              >
+                {item.name}
+              </NavLink>
               ))}
             </div>
           </Disclosure.Panel>
