@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { HomePage } from "./components/HomePage"
 import { SimpleNavbar } from "./components/SimpleNavbar"
 import "./index.css"
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <SimpleNavbar />
+      <HomePage />
       <div className="App m-4">
         <article className="prose">
           <h1 className="">React + Vite</h1>
