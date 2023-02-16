@@ -1,6 +1,7 @@
 import { Home } from "./Home"
 import { Error } from "./Error"
 import { Work } from "./Work"
+import { Biography } from "./Biography"
 import { createBrowserRouter } from "react-router-dom"
 
 const router = createBrowserRouter([
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/biography",
+    element: <Biography />
   },
   {
     path: "/exhibitions",
