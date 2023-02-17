@@ -4,7 +4,7 @@ import { useLoaderData, useNavigation } from "react-router-dom"
 
 const Work = () => {
   const id = useLoaderData() // gets unwrapped res object from fetch
-  const navigation = useNavigation() // contains state: "loading"
+  const navigation = useNavigation() // contains state: "loading" | "submitting"
 
   return (
     <>
