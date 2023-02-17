@@ -16,9 +16,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "work/:id",
-        loader: async ({ request }: any) => {
-          const res = await fetch(`./${request.id}`)
-          return await res.json()
+        loader: async ({ params }: any) => {
+          return await fetch(`./${params.id}`)
         },
       },
     ],
