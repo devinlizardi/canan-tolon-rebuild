@@ -6,6 +6,15 @@ import { SimpleNavbarProps } from "./types"
 const activeClassName = "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
 const passiveClassName = "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 
+const navigation = [
+  { name: "home", href: "/"},
+  { name: "work", href: "/work"},
+  { name: "biography", href: "/biography"},
+  { name: "exhibitions", href: "/exhibitions"},
+  { name: "publications", href: "/publications"},
+  { name: "contact", href: "/contact"},
+]
+
 function SimpleNavbar() {
   return (
     <Disclosure as="nav" className="bg-gray-800">

@@ -1,6 +1,6 @@
 import { WorkProps } from "./types"
 import { SimpleNavbar } from "../../components/SimpleNavbar"
-import { useLoaderData, useNavigation } from "react-router-dom"
+import { Outlet, useLoaderData, useNavigation } from "react-router-dom"
 
 const Work = () => {
   const id = useLoaderData() // gets unwrapped res object from fetch
@@ -28,6 +28,11 @@ const Work = () => {
             neque vitae ante finibus mattis. Sed et vestibulum nisl, ut porttitor mauris. Pellentesque ut ligula at
             sapien ullamcorper porta.
           </p>
+        </div>
+        <div className="prose contents">
+          <h1 className="col-start-2 row-start-3 justify-self-start">Outlet</h1>
+          <> { id } </>
+          <Outlet />
         </div>
       </div>
     </>

@@ -23,7 +23,8 @@ const router = createBrowserRouter([
           const formData = await request.formData()
           const nextArt = await fetch(`./${formData.get}`)
           return redirect(`/work/${nextArt}`)
-        }
+        },
+        element: <h1> route </h1>
       },
     ],
   },
