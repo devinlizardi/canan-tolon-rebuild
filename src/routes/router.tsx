@@ -2,7 +2,7 @@ import { Home } from "./Home"
 import { Error } from "./Error"
 import { Work } from "./Work"
 import { Biography } from "./Biography"
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter, redirect } from "react-router-dom"
 
 const router = createBrowserRouter([
   {
@@ -11,29 +11,34 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/work",
+    path: "work",
     element: <Work />,
     children: [
       {
         path: "work/:id",
-        loader: ({ params }: any) => {
-          console.log(params.id)
+        loader: async ({ params }: any) => {
+          return await fetch(`./${params.id}`)
         },
+        action: async ({ request }) => {
+          const formData = await request.formData()
+          const nextArt = await fetch(`./${formData.get}`)
+          return redirect(`/work/${nextArt}`)
+        }
       },
     ],
   },
   {
-    path: "/biography",
+    path: "biography",
     element: <Biography />
   },
   {
-    path: "/exhibitions",
+    path: "exhibitions",
   },
   {
-    path: "/publications",
+    path: "publications",
   },
   {
-    path: "/contact",
+    path: "contact",
   },
 ])
 
