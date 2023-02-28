@@ -31,8 +31,9 @@ const Work = () => {
         </div>
         <div className="prose contents">
           <h1 className="col-start-2 row-start-3 justify-self-start">Outlet</h1>
-          <> { id } </>
-          <Outlet />
+          <h1 className="col-start-2 row-start-4 justify-self-start">
+            <Outlet />
+          </h1>
         </div>
       </div>
     </>
