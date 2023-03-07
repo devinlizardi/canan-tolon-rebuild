@@ -5,12 +5,10 @@ interface homeLinkProps {
   grey: string
   color: string
   to: string
-  style: string
 }
 
 const HomeLink = (props: homeLinkProps) => {
-  const { grey, color, to, style } = props
-  // const style = `absolute h-auto z-10 left-0 top-32`
+  const { grey, color, to } = props
 
   const [isHovering, setIsHovering] = useState(false)
   const handleMouseOver = () => {
@@ -22,11 +20,9 @@ const HomeLink = (props: homeLinkProps) => {
   }
 
   return (
-    <div className={style} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      <Link to={to}>
-        {!isHovering ? <img src={grey} className="" /> : <img src={color} className="" />}
-      </Link>
-    </div>
+    <Link onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} to={to}>
+      {!isHovering ? <img className="h-fill" src={grey} /> : <img src={color} />}
+    </Link>
   )
 }
 
