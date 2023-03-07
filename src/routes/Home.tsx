@@ -6,6 +6,8 @@ import hoverWorkGrey from "./../public/homepage/work1.png"
 import hoverWorkColor from "./../public/homepage/work2.png"
 import hoverBioGrey from "./../public/homepage/bio1.png"
 import hoverBioColor from "./../public/homepage/bio2.png"
+import hoverGraphyGrey from "./../public/homepage/graphy1.png"
+import hoverGraphyColor from "./../public/homepage/graphy2.png"
 
 import { HomeLink } from "./../components/HomeLink"
 
@@ -24,16 +26,16 @@ const Home = () => {
         </div>
 
         {/* desktop */}
-        <div className="hidden md:block row-start-2 col-start-2 relative w-full h-full">
-          <div className="absolute z-10">
+        <div className="relative hidden md:block row-start-2 col-start-2 w-fit h-fit">
+          <img src={fullHero} className="" alt="mobile hero" />
+          <div className="absolute top-0 z-10 w-full h-full">
             <img src={header} />
-            <div className="flex justify-between h-full px-4">
+            <div className="w-full h-fit flex justify-between">
               <HomeLink grey={hoverWorkGrey} color={hoverWorkColor} to="/work" />
               <HomeLink grey={hoverBioGrey} color={hoverBioColor} to="/biography" />
             </div>
+            <HomeLink grey={hoverGraphyGrey} color={hoverGraphyColor} to="/biography" />
           </div>
-
-          <img src={fullHero} className="relative" alt="mobile hero" />
         </div>
       </div>
     </>
