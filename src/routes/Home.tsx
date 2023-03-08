@@ -1,7 +1,8 @@
+import { useState } from "react"
+import { HomeLink } from "./../components/HomeLink"
 import mobileHero from "./../public/homepage/iphone_layout.png"
 import fullHero from "./../public/homepage/BG.png"
 import header from "./../public/homepage/canantolon.png"
-
 import hoverWorkGrey from "./../public/homepage/work1.png"
 import hoverWorkColor from "./../public/homepage/work2.png"
 import hoverBioGrey from "./../public/homepage/bio1.png"
@@ -9,9 +10,18 @@ import hoverBioColor from "./../public/homepage/bio2.png"
 import hoverGraphyGrey from "./../public/homepage/graphy1.png"
 import hoverGraphyColor from "./../public/homepage/graphy2.png"
 
-import { HomeLink } from "./../components/HomeLink"
-
 const Home = () => {
+  const [workHover, setWorkHover] = useState(false)
+  const [bioHover, setBioHover] = useState(false)
+
+  const handleMouseOver = (handler: React.Dispatch<React.SetStateAction<boolean>>) => {
+    handler(true)
+  }
+
+  const handleMouseOut = (handler: React.Dispatch<React.SetStateAction<boolean>>) => {
+    handler(false)
+  }
+
   return (
     <>
       <div
@@ -27,14 +37,38 @@ const Home = () => {
 
         {/* desktop */}
         <div className="relative hidden md:block row-start-2 col-start-2 w-fit h-fit">
-          <img src={fullHero} className="" alt="mobile hero" />
+          <img src={fullHero} alt="mobile hero" />
           <div className="absolute top-0 z-10 w-full h-full">
             <img src={header} />
-            <div className="w-full h-fit flex justify-between">
-              <HomeLink grey={hoverWorkGrey} color={hoverWorkColor} to="/work" />
-              <HomeLink grey={hoverBioGrey} color={hoverBioColor} to="/biography" />
+            <div className="w-full h-[16%] flex justify-between">
+              <HomeLink
+                className="h-full"
+                hover={workHover}
+                handleMouseOver={() => handleMouseOver(setWorkHover)}
+                handleMouseOut={() => handleMouseOut(setWorkHover)}
+                grey={hoverWorkGrey}
+                color={hoverWorkColor}
+                to="/work"
+              />
+              <HomeLink
+                className="h-full"
+                hover={bioHover}
+                handleMouseOver={() => handleMouseOver(setBioHover)}
+                handleMouseOut={() => handleMouseOut(setBioHover)}
+                grey={hoverBioGrey}
+                color={hoverBioColor}
+                to="/biography"
+              />
             </div>
-            <HomeLink grey={hoverGraphyGrey} color={hoverGraphyColor} to="/biography" />
+            <HomeLink
+              className="h-[16%]"
+              hover={bioHover}
+              handleMouseOver={() => handleMouseOver(setBioHover)}
+              handleMouseOut={() => handleMouseOut(setBioHover)}
+              grey={hoverGraphyGrey}
+              color={hoverGraphyColor}
+              to="/biography"
+            />
           </div>
         </div>
       </div>

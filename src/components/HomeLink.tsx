@@ -2,26 +2,21 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 interface homeLinkProps {
+  hover: boolean
+  handleMouseOver: () => void
+  handleMouseOut: () => void
   grey: string
   color: string
   to: string
+  className?: string
 }
 
 const HomeLink = (props: homeLinkProps) => {
-  const { grey, color, to } = props
-  const [isHovering, setIsHovering] = useState(false)
-
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
+  const { hover, handleMouseOver, handleMouseOut, grey, color, to, className } = props
 
   return (
-    <Link onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} to={to} >
-      {!isHovering ? <img src={grey} /> : <img src={color} />}
+    <Link onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} to={to}>
+      {!hover ? <img className={className} src={grey} /> : <img className={className} src={color} />}
     </Link>
   )
 }
