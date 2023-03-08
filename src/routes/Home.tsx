@@ -9,16 +9,29 @@ import hoverBioGrey from "./../public/homepage/bio1.png"
 import hoverBioColor from "./../public/homepage/bio2.png"
 import hoverGraphyGrey from "./../public/homepage/graphy1.png"
 import hoverGraphyColor from "./../public/homepage/graphy2.png"
+import hoverExGrey from "./../public/homepage/ex1.png"
+import hoverExColor from "./../public/homepage/ex2.png"
+import hoverHibitionsGrey from "./../public/homepage/hibitions1.png"
+import hoverHibitionsColor from "./../public/homepage/hibitions2.png"
+import hoverPublicatioGrey from "./../public/homepage/publicatio1.png"
+import hoverPublicatioColor from "./../public/homepage/publicatio2.png"
+import hoverNsGrey from "./../public/homepage/ns1.png"
+import hoverNsColor from "./../public/homepage/ns2.png"
+import hoverContactGrey from "./../public/homepage/contact1.png"
+import hoverContactColor from "./../public/homepage/contact2.png"
 
 const Home = () => {
   const [workHover, setWorkHover] = useState(false)
   const [bioHover, setBioHover] = useState(false)
+  const [exhibitHover, setExhibitHover] = useState(false)
+  const [publicationsHover, setPublicationsHover] = useState(false)
+  const [contactHover, setContactHover] = useState(false)
 
-  const handleMouseOver = (handler: React.Dispatch<React.SetStateAction<boolean>>) => {
+  const handleMouseOver = (handler: React.Dispatch<React.SetStateAction<boolean>>): void => {
     handler(true)
   }
 
-  const handleMouseOut = (handler: React.Dispatch<React.SetStateAction<boolean>>) => {
+  const handleMouseOut = (handler: React.Dispatch<React.SetStateAction<boolean>>): void => {
     handler(false)
   }
 
@@ -60,15 +73,64 @@ const Home = () => {
                 to="/biography"
               />
             </div>
+            <div className="w-full h-[16%] flex justify-between">
+              <HomeLink
+                className="h-full"
+                hover={bioHover}
+                handleMouseOver={() => handleMouseOver(setBioHover)}
+                handleMouseOut={() => handleMouseOut(setBioHover)}
+                grey={hoverGraphyGrey}
+                color={hoverGraphyColor}
+                to="/biography"
+              />
+              <HomeLink
+                className="h-full"
+                hover={exhibitHover}
+                handleMouseOver={() => handleMouseOver(setExhibitHover)}
+                handleMouseOut={() => handleMouseOut(setExhibitHover)}
+                grey={hoverExGrey}
+                color={hoverExColor}
+                to="/exhibitions"
+              />
+            </div>
             <HomeLink
-              className="h-[16%]"
-              hover={bioHover}
-              handleMouseOver={() => handleMouseOver(setBioHover)}
-              handleMouseOut={() => handleMouseOut(setBioHover)}
-              grey={hoverGraphyGrey}
-              color={hoverGraphyColor}
-              to="/biography"
+              className="w-auto h-[16%]"
+              hover={exhibitHover}
+              handleMouseOver={() => handleMouseOver(setExhibitHover)}
+              handleMouseOut={() => handleMouseOut(setExhibitHover)}
+              grey={hoverHibitionsGrey}
+              color={hoverHibitionsColor}
+              to="/exhibitions"
             />
+            <HomeLink
+              className="w-auto h-[16%]"
+              hover={publicationsHover}
+              handleMouseOver={() => handleMouseOver(setPublicationsHover)}
+              handleMouseOut={() => handleMouseOut(setPublicationsHover)}
+              grey={hoverPublicatioGrey}
+              color={hoverPublicatioColor}
+              to="/publications"
+            />
+            <div className="w-full h-[16%] flex justify-between">
+              <HomeLink
+                className="w-auto h-full"
+                hover={publicationsHover}
+                handleMouseOver={() => handleMouseOver(setPublicationsHover)}
+                handleMouseOut={() => handleMouseOut(setPublicationsHover)}
+                grey={hoverNsGrey}
+                color={hoverNsColor}
+                to="/publications"
+              />
+              <HomeLink
+                className="w-auto h-full"
+                hover={contactHover}
+                handleMouseOver={() => handleMouseOver(setContactHover)}
+                handleMouseOut={() => handleMouseOut(setContactHover)}
+                grey={hoverContactGrey}
+                color={hoverContactColor}
+                to="/contact"
+              />
+            </div>
           </div>
         </div>
       </div>
