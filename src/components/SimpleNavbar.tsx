@@ -6,12 +6,12 @@ const activeClassName = "text-white px-1 py-0 text-md font-bold border border-4 
 const passiveClassName = "text-white px-1 py-0 text-md font-bold border-4 border-[#ccc] hover:border-red-600 uppercase"
 
 const navigation = [
-  { name: "canantolon", href: "/"},
-  { name: "work", href: "/work"},
-  { name: "biography", href: "/biography"},
-  { name: "exhibitions", href: "/exhibitions"},
-  { name: "publications", href: "/publications"},
-  { name: "contact", href: "/contact"},
+  { name: "canantolon", href: "/" },
+  { name: "work", href: "/work" },
+  { name: "biography", href: "/biography" },
+  { name: "exhibitions", href: "/exhibitions" },
+  { name: "publications", href: "/publications" },
+  { name: "contact", href: "/contact" },
 ]
 
 function SimpleNavbar() {
@@ -39,9 +39,7 @@ function SimpleNavbar() {
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className={({ isActive }) =>
-                          isActive ? activeClassName : passiveClassName
-                        }
+                        className={({ isActive }) => (isActive ? activeClassName : passiveClassName)}
                       >
                         {item.name}
                       </NavLink>
@@ -56,14 +54,12 @@ function SimpleNavbar() {
             <div className="space-y-1 px-2 pt-2 pb-3 flex flex-col">
               {navigation.map((item) => (
                 <NavLink
-                key={item.name}
-                to={item.href}
-                className={({ isActive }) =>
-                  isActive ? activeClassName : passiveClassName
-                }
-              >
-                {item.name}
-              </NavLink>
+                  key={item.name}
+                  to={item.href}
+                  className={({ isActive }) => (isActive ? activeClassName : passiveClassName)}
+                >
+                  {item.name}
+                </NavLink>
               ))}
             </div>
           </Disclosure.Panel>

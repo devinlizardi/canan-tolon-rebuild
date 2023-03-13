@@ -44,12 +44,12 @@ const Home = () => {
         grid-rows-[1fr,_min-content,_1fr]"
       >
         {/* mobile */}
-        <div className="md:hidden relative row-start-2 col-start-2 w-fit max-w-lg h-fit">
-          <img src={fullHero} className="h-[859px] w-[483px] object-cover" alt="mobile hero" />
+        <div className="md:hidden relative row-start-2 col-start-2 w-[362px] min-[565px]:w-[483px] h-fit">
+          <img src={fullHero} className="h-[859px] w-full object-cover" alt="mobile hero" />
           <div className="absolute top-0 z-10 w-full h-full">
-            <div className="w-full h-[6.6%] flex justify-between relative -left-1 top-4">
+            <div className="w-auto h-[6.6%] flex justify-between relative -left-1 top-4">
               <img src={canan} />
-              <img src={tolon} />
+              <img src={tolon} className="hidden min-[565px]:block" />
             </div>
             <HomeLink
               className="w-auto h-[10%] relative top-8"
