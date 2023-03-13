@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { HomeLink } from "./../components/HomeLink"
-import mobileHero from "./../public/homepage/iphone_layout.png"
 import fullHero from "./../public/homepage/BG.png"
 import canan from "./../public/homepage/canan.png"
 import tolon from "./../public/homepage/tolon.png"
