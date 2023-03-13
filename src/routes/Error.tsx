@@ -1,4 +1,5 @@
 import { useRouteError } from "react-router-dom"
+import { SimpleNavbar } from "../components/SimpleNavbar"
 
 type Error = {
   statusText: string
@@ -15,6 +16,7 @@ const Error = () => {
     error = obj
     return (
       <div id="error-page">
+        <SimpleNavbar />
         <h1>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>
         <p>
@@ -25,6 +27,7 @@ const Error = () => {
   } else {
     return (
       <>
+        <SimpleNavbar />
         <h1>unknown error</h1>
       </>
     )
