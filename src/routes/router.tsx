@@ -1,9 +1,12 @@
+import { createBrowserRouter, redirect } from "react-router-dom"
 import { Home } from "./Home"
-import { Error } from "./Error"
 import { Work } from "./Work"
 import { Biography } from "./Biography"
+import { Exhibitions } from "./Exhibitions"
+import { Publications } from "./Publications"
+import { Contact } from "./Contact"
 import { Temp } from "../components/Temp"
-import { createBrowserRouter, redirect } from "react-router-dom"
+import { Error } from "./Error"
 
 const router = createBrowserRouter([
   {
@@ -36,12 +39,15 @@ const router = createBrowserRouter([
   },
   {
     path: "exhibitions",
+    element: <Exhibitions />
   },
   {
     path: "publications",
+    element: <Publications />
   },
   {
     path: "contact",
+    element: <Contact />
   },
 ])
 
