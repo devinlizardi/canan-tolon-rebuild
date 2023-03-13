@@ -7,7 +7,7 @@ const activeClassName = "text-white px-1 py-0 text-md font-bold border border-4 
 const passiveClassName = "text-white px-1 py-0 text-md font-bold border-4 border-[#ccc] hover:border-red-600 uppercase"
 
 const navigation = [
-  { name: "home", href: "/"},
+  { name: "canantolon", href: "/"},
   { name: "work", href: "/work"},
   { name: "biography", href: "/biography"},
   { name: "exhibitions", href: "/exhibitions"},

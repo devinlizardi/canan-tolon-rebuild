@@ -13,7 +13,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@headlessui/react": "^1.7.11",
+    "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.15",
     "@tailwindcss/typography": "^0.5.9",
     "@types/react": "^18.0.15",
