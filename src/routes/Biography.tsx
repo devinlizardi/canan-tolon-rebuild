@@ -1,4 +1,4 @@
-import { SimpleNavbar } from "./../components/SimpleNavbar"
+import { SimpleNavbar } from "../components/SimpleNavbar"
 
 const Biography = () => {
   return (

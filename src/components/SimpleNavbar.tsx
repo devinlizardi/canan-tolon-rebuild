@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { Disclosure } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-import { SimpleNavbarProps } from "./types"
 
 const activeClassName = "text-white px-1 py-0 text-md font-bold border border-4 border-red-600 uppercase"
 const passiveClassName = "text-white px-1 py-0 text-md font-bold border-4 border-[#ccc] hover:border-red-600 uppercase"
