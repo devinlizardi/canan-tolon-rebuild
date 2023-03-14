@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom"
 import { Disclosure } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
-const activeClassName = "text-white px-1 py-0 text-md font-bold border border-4 border-red-600 uppercase"
-const passiveClassName = "text-white px-1 py-0 text-md font-bold border-4 border-[#ccc] hover:border-red-600 uppercase"
+const activeClassName = "text-white px-1 py-0 text-md font-bold uppercase ring-4 ring-red-300"
+const passiveClassName = "text-white px-1 py-0 text-md font-bold uppercase hover:ring-4 hover:ring-red-300"
 
 const navigation = [
   { name: "canantolon", href: "/" },
@@ -23,7 +23,7 @@ function SimpleNavbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 text-white outline-none hover:bg-gray-400 focus:ring-4 focus:ring-inset focus:ring-red-300">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
