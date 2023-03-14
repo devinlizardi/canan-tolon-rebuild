@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":id",
+        id: "viewer",
         loader: async ({ params }: any) => {
           // return await fetch(`./${params.id}`)
           return params.id
@@ -39,15 +40,15 @@ const router = createBrowserRouter([
   },
   {
     path: "exhibitions",
-    element: <Exhibitions />
+    element: <Exhibitions />,
   },
   {
     path: "publications",
-    element: <Publications />
+    element: <Publications />,
   },
   {
     path: "contact",
-    element: <Contact />
+    element: <Contact />,
   },
 ])
 
