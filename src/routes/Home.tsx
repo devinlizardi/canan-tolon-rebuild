@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { HomeLink } from "./../components/HomeLink"
-import fullHero from "./../public/homepage/BG.png"
 import canan from "./../public/homepage/canan.png"
 import tolon from "./../public/homepage/tolon.png"
 import hoverWorkGrey from "./../public/homepage/work1.png"
@@ -45,7 +44,7 @@ const Home = () => {
       >
         {/* mobile */}
         <div className="md:hidden relative row-start-2 col-start-2 w-[362px] min-[565px]:w-[483px] h-fit">
-          <img src={fullHero} className="h-[859px] w-full object-cover" alt="mobile hero" />
+          <img src="https://canantolon.b-cdn.net/BG.png" className="h-[859px] w-full object-cover" alt="mobile hero" />
           <div className="absolute top-0 z-10 w-full h-full">
             <div className="w-auto h-[6.6%] flex justify-between relative -left-1 top-4">
               <img src={canan} />
@@ -128,7 +127,7 @@ const Home = () => {
 
         {/* desktop */}
         <div className="relative hidden md:block row-start-2 col-start-2 w-fit h-fit">
-          <img src={fullHero} alt="mobile hero" />
+          <img src="https://canantolon.b-cdn.net/BG.png" alt="mobile hero" />
           <div className="absolute top-0 z-10 w-full h-full">
             <div className="w-full h-[15.95%] flex justify-between relative -left-2">
               <img src={canan} />
