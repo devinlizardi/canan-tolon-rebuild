@@ -1,12 +1,12 @@
 import { createBrowserRouter, redirect } from "react-router-dom"
-import { Home } from "./Home"
-import { Work } from "./Work"
-import { Biography } from "./Biography"
-import { Exhibitions } from "./Exhibitions"
-import { Publications } from "./Publications"
-import { Contact } from "./Contact"
-import { Temp } from "../components/Temp"
-import { Error } from "./Error"
+import { Home } from "./routes/Home"
+import { Work } from "./routes/Work"
+import { Biography } from "./routes/Biography"
+import { Exhibitions } from "./routes/Exhibitions"
+import { Publications } from "./routes/Publications"
+import { Contact } from "./routes/Contact"
+import { Temp } from "./components/Temp"
+import { Error } from "./routes/Error"
 
 const router = createBrowserRouter([
   {

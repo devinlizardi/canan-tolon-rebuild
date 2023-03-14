@@ -1,7 +1,6 @@
-import { WorkProps } from "./types"
-import { SimpleNavbar } from "../../components/SimpleNavbar"
 import { Outlet, useLoaderData, useNavigation } from "react-router-dom"
-import { Square } from "../../components/Square"
+import { SimpleNavbar } from "./../components/SimpleNavbar"
+import { Square } from "./../components/Square"
 
 const Work = () => {
   const id = useLoaderData() // gets unwrapped res object from fetch

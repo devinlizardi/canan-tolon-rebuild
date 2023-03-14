@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import { RouterProvider } from "react-router-dom"
 import { Spinning } from "./routes/Spinning"
-import { router } from "./routes/router"
+import { router } from "./router"
 import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
