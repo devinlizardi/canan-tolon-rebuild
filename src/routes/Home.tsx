@@ -128,7 +128,7 @@ const Home = () => {
 
         {/* desktop */}
         <div className="relative hidden md:block row-start-2 col-start-2 w-fit h-fit">
-          <img src="https://canantolon.b-cdn.net/BG.png" alt="mobile hero" />
+          <img src={bg} alt="mobile hero" />
           <div className="absolute top-0 z-10 w-full h-full">
             <div className="w-full h-[15.95%] flex justify-between relative -left-2">
               <img src={canan} />
