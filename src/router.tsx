@@ -15,24 +15,12 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "work",
+    path: "work/*",
     element: <Work />,
-    children: [
-      {
-        path: ":id",
-        id: "viewer",
-        loader: async ({ params }: any) => {
-          // return await fetch(`./${params.id}`)
-          return params.id
-        },
-        action: async ({ request }) => {
-          const formData = await request.formData()
-          const nextArt = await fetch(`./${formData.get}`)
-          return redirect(`/work/${nextArt}`)
-        },
-        element: <Temp />,
-      },
-    ],
+    loader: async ({ params }: any) => {
+      const id = Object.keys(params)[0] 
+      return params[id]
+    },
   },
   {
     path: "biography",
