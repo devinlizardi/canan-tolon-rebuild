@@ -3,12 +3,11 @@ import { SimpleNavbar } from "./../components/SimpleNavbar"
 import { Square } from "./../components/Square"
 
 const Work = () => {
-  const navigation = useLocation() // contains state: "loading" | "submitting"
-  console.log(navigation)
+  const location = useLocation() // contains state: "loading" | "submitting"
 
   const boxes = []
   for (let i = 0; i < 40; i++) {
-    boxes.push(<Square key={i} />)
+    boxes.push(<Square key={i} to={i.toString()} name={"Untitled"} date="2009" gallery="Parasol unit foundation for contemporary art"/>)
   }
 
   return (
