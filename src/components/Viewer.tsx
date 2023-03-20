@@ -30,6 +30,9 @@ const Viewer = () => {
           </div>
         )}
       </div>
+      <div className="my-16 row-start-3 col-start-2 bg-[#ccc] w-full h-24">
+
+      </div>
     </>
   )
 }
