@@ -1,10 +1,9 @@
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { Viewer } from "../components/Viewer"
 import { SimpleNavbar } from "./../components/SimpleNavbar"
 import { Square } from "./../components/Square"
 
 const Work = () => {
-  const location = useLocation() // contains state: "loading" | "submitting"
 
   const boxes = []
   for (let i = 0; i < 40; i++) {

@@ -1,18 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLoaderData } from "react-router-dom"
-import { artwork } from "./../public/demo_images.json"
-
-interface Artwork {
-  id: number
-  img: string // should be URL
-  name: string
-  year: string
-  materials?: string
-  size?: string
-  medium?: string
-  gallery?: string
-  country?: string
-}
+import { getAll, Artwork } from "../services/handleArtwork"
 
 const Viewer = () => {
   const id = useLoaderData()
@@ -21,7 +9,7 @@ const Viewer = () => {
   useEffect(() => {
     try {
       if (typeof id == "string") {
-        setArt(artwork[Number(id)])
+        setArt(getAll()[Number(id)])
       }
     } catch (e: unknown) {
       if (e instanceof Error) {
