@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 interface SquareProps {
+  id: number
   to: string
   name: string
   date: string

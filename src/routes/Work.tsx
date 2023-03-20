@@ -11,6 +11,7 @@ const Work = () => {
     boxes.push(
       <Square
         key={i}
+        id={i}
         to={i.toString()}
         name={"Untitled"}
         date="2009"
@@ -23,7 +24,7 @@ const Work = () => {
     <>
       <SimpleNavbar />
       <div className="m-0 w-full place-items-center justify-center grid grid-cols-[minmax(0,_50px)_minmax(auto,_40rem)_minmax(0,_50px)]">
-        <div className="row-start-1 col-start-2 h-20" />
+        <div className="row-start-1 col-start-2 h-4" />
 
         <Routes>
           <Route
