@@ -14,7 +14,7 @@ const Square = ({ to, name, date, gallery }: SquareProps) => {
   return (
     <>
       <div
-        className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] hover:ring-4 ring-[#a7a7a7] grid place-content-center"
+        className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] hover:ring-4 ring-[#a7a7a7] ring-inset grid place-content-center"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
       >

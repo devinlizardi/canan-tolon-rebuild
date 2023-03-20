@@ -1,5 +1,5 @@
-import { Outlet, Route, Routes, useLocation } from "react-router-dom"
-import { Temp } from "../components/Temp"
+import { Route, Routes, useLocation } from "react-router-dom"
+import { Viewer } from "../components/Viewer"
 import { SimpleNavbar } from "./../components/SimpleNavbar"
 import { Square } from "./../components/Square"
 
@@ -34,7 +34,7 @@ const Work = () => {
               </div>
             }
           />
-          <Route path="/:id" element={<Temp />}/>
+          <Route path="/:id" element={<Viewer />}/>
         </Routes>
       </div>
     </>

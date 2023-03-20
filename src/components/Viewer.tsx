@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 
-const Temp = () => {
+const Viewer = () => {
   const id = useLoaderData()
   
   return(
@@ -10,4 +10,4 @@ const Temp = () => {
   )
 }
 
-export { Temp }
+export { Viewer }
