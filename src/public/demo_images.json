@@ -14,7 +14,40 @@
     {
       "id": 1,
       "img": "",
-      "name": "Untitled",
+      "name": "Untitled 1",
+      "year": "2019",
+      "materials": "oil on canvas",
+      "size": "94 1/10 x 76 in | 239 x 193 cm",
+      "medium": "Painting",
+      "gallery": "Galeri Nev Istanbul",
+      "country": ""
+    },
+    {
+      "id": 2,
+      "img": "",
+      "name": "Untitled 2",
+      "year": "2019",
+      "materials": "oil on canvas",
+      "size": "94 1/10 x 76 in | 239 x 193 cm",
+      "medium": "Painting",
+      "gallery": "Galeri Nev Istanbul",
+      "country": ""
+    },
+    {
+      "id": 3,
+      "img": "",
+      "name": "Untitled 3",
+      "year": "2019",
+      "materials": "oil on canvas",
+      "size": "94 1/10 x 76 in | 239 x 193 cm",
+      "medium": "Painting",
+      "gallery": "Galeri Nev Istanbul",
+      "country": ""
+    },
+    {
+      "id": 4,
+      "img": "",
+      "name": "Untitled 4",
       "year": "2019",
       "materials": "oil on canvas",
       "size": "94 1/10 x 76 in | 239 x 193 cm",
