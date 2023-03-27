@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-interface SquareProps {
+interface CarouselSquareProps {
   id: number
   to: string
   name: string
@@ -9,13 +9,13 @@ interface SquareProps {
   gallery?: string
 }
 
-const Square = ({ to, name, date, gallery }: SquareProps) => {
+const CarouselSquare = ({ id, to, name, date, gallery }: CarouselSquareProps) => {
   const [hover, setHover] = useState(false)
 
   return (
     <>
       <div
-        className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] grid place-content-center"
+        className="flex-none w-[150px] h-[150px] bg-[#ccc] grid place-content-center"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
       >
@@ -33,4 +33,4 @@ const Square = ({ to, name, date, gallery }: SquareProps) => {
   )
 }
 
-export { Square }
+export { CarouselSquare }

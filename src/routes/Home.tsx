@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <>
       <div
-        className="m-0 bg-[#ccc] w-full min-h-screen h-full
+        className="m-0 w-full min-h-screen h-full
         place-items-center justify-center gap-4 grid 
         grid-cols-[minmax(0,_20px)_minmax(auto,_60rem)_minmax(0,_20px)] 
         grid-rows-[1fr,_min-content,_1fr]"
@@ -128,9 +128,9 @@ const Home = () => {
 
         {/* desktop */}
         <div className="relative hidden md:block row-start-2 col-start-2 w-fit h-fit">
-          <img src="https://canantolon.b-cdn.net/BG.png" alt="mobile hero" />
+          <img src={bg} alt="mobile hero" />
           <div className="absolute top-0 z-10 w-full h-full">
-            <div className="w-full h-[15.95%] flex justify-between relative -left-2">
+            <div className="w-full h-[15.85%] flex justify-between relative -left-2 mt-1 mb-7">
               <img src={canan} />
               <img src={tolon} />
             </div>

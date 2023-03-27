@@ -5,7 +5,6 @@ import { Biography } from "./routes/Biography"
 import { Exhibitions } from "./routes/Exhibitions"
 import { Publications } from "./routes/Publications"
 import { Contact } from "./routes/Contact"
-import { Temp } from "./components/Temp"
 import { Error } from "./routes/Error"
 
 const router = createBrowserRouter([
