@@ -18,13 +18,22 @@ const Exhibitions = () => {
           <Route
             path="/"
             element={
-              <div className="row-start-2 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-center md:justify-start">
-                <div className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] font-light text-2xl text-slate-50 text-center pt-12">
-                  <p>SIDESTEPS</p>
-                  <p>2014</p>
+              <>
+                <div className="row-start-2 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-center md:justify-start">
+                  <div className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] font-light text-2xl text-slate-50 text-center pt-12">
+                    <p>SIDESTEPS</p>
+                    <p>2014</p>
+                  </div>
+                  {boxes}
                 </div>
-                {boxes}
-              </div>
+                <div className="mt-16 row-start-3 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-center md:justify-start">
+                  <div className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] font-light text-2xl text-slate-50 text-center pt-12">
+                    <p>TIME AFTER TIME</p>
+                    <p>2012 </p>
+                  </div>
+                  {boxes}
+                </div>
+              </>
             }
           />
           <Route path="/:exid" element={<Viewer />} />
