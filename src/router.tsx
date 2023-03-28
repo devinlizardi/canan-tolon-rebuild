@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     path: "work/*",
     element: <Work />,
     loader: async ({ params }: any) => {
-      const id = Object.keys(params)[0] 
+      const id = Object.keys(params)[0]
       return params[id]
     },
   },
@@ -26,8 +26,12 @@ const router = createBrowserRouter([
     element: <Biography />,
   },
   {
-    path: "exhibitions",
+    path: "exhibitions/*",
     element: <Exhibitions />,
+    loader: async ({ params }: any) => {
+      const id = Object.keys(params)[0]
+      return params[id]
+    },
   },
   {
     path: "publications",

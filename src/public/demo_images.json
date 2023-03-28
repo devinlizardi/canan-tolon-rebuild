@@ -55,5 +55,49 @@
       "gallery": "Galeri Nev Istanbul",
       "country": ""
     }
+  ],
+  "exhibitions": [
+    {
+      "title": "sidesteps",
+      "year": "2014",
+      "squares": [
+        {
+          "id": 0,
+          "img": "",
+          "description": ""
+        },
+        {
+          "id": 1,
+          "img": "",
+          "description": ""
+        },
+        {
+          "id": 2,
+          "img": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "title": "time after time",
+      "year": 2012,
+      "squares": [
+        {
+          "id": 0,
+          "img": "",
+          "description": ""
+        },
+        {
+          "id": 1,
+          "img": "",
+          "description": ""
+        },
+        {
+          "id": 2,
+          "img": "",
+          "description": ""
+        }
+      ]
+    }
   ]
 }
