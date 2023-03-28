@@ -5,7 +5,7 @@ import { Viewer } from "../components/Viewer"
 
 const Exhibitions = () => {
   const boxes = []
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 3; i++) {
     boxes.push(<Square key={i} id={i} to={i.toString()} name={"SIDESTEPS"} date="2014" gallery="" />)
   }
   return (
@@ -19,18 +19,8 @@ const Exhibitions = () => {
             path="/"
             element={
               <>
+              <h1 className="text-3xl font-semibold pl-14 pb-8 mt-16">SIDESTEPS</h1>
                 <div className="row-start-2 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-center md:justify-start">
-                  <div className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] font-light text-2xl text-slate-50 text-center pt-12">
-                    <p>SIDESTEPS</p>
-                    <p>2014</p>
-                  </div>
-                  {boxes}
-                </div>
-                <div className="mt-16 row-start-3 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-center md:justify-start">
-                  <div className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] font-light text-2xl text-slate-50 text-center pt-12">
-                    <p>TIME AFTER TIME</p>
-                    <p>2012 </p>
-                  </div>
                   {boxes}
                 </div>
               </>
