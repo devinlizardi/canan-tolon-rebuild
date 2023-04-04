@@ -27,6 +27,13 @@ const Square = ({ to, name, date, gallery }: SquareProps) => {
               <h2 className="opacity-75">{gallery}</h2>
             </div>
           )}
+          {!hover && (
+            <div className="flex flex-col invisible">
+              <span><i>{name}</i>, {date}</span>
+              <br />
+              <h2 className="opacity-75">{gallery}</h2>
+            </div>
+          )}
         </Link>
       </div>
     </>

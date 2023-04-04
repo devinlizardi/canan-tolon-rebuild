@@ -5,10 +5,12 @@ const Biography = () => {
     <>
       <SimpleNavbar />
       <div className="w-full grid place-content-center px-8">
-        <table className="w-full max-w-3xl h-fit mt-8 mb-16 prose table-fixed">
+        <table className="w-full max-w-3xl xl:max-w-4xl lg:ml-40 h-fit mb-16 prose table-fixed">
           <tbody>
             <tr>
-              <td className="text-xl font-medium py-8 w-[calc(20px+10vw)]">SOLO EXHIBITIONS</td>
+              <td className="text-xl font-medium py-8 w-[calc(20px+10vw)]">
+                <span className="block w-max">SOLO EXHIBITIONS</span>
+              </td>
             </tr>
             <tr>
               <td className="font-light align-top">2019</td>
@@ -171,7 +173,9 @@ const Biography = () => {
               <td> University of California at Berkeley, CA</td>
             </tr>
             <tr>
-              <td className="text-xl font-medium py-8">GROUP EXHIBITIONS</td>
+              <td className="text-xl font-medium py-8">
+                <span className="block w-max">GROUP EXHIBITIONS</span>
+              </td>
             </tr>
             <tr>
               <td className="font-light align-top">2022</td>
@@ -495,7 +499,9 @@ const Biography = () => {
               <td>California College of Arts and Crafts, San Francisco, CA</td>
             </tr>
             <tr>
-              <td className="text-xl font-medium py-8">PUBLIC COLLECTION</td>
+              <td className="text-xl font-medium py-8">
+                <span className="block w-max">PUBLIC COLLECTION</span>
+              </td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -523,7 +529,9 @@ const Biography = () => {
               <td className="text-lg">SantralIstanbul, Istanbul</td>
             </tr>
             <tr>
-              <td className="text-xl font-medium py-8">RESIDENCIES AND AWARDS</td>
+              <td className="text-xl font-medium py-8">
+                <span className="block w-max">RESIDENCIES AND AWARDS</span>
+              </td>
             </tr>
             <tr>
               <td className="font-light align-top">2020</td>
@@ -582,7 +590,9 @@ const Biography = () => {
               <td>San Francisco Focus Design Award, San Francisco, CA</td>
             </tr>
             <tr>
-              <td className="text-xl font-medium py-8">EDUCATION</td>
+              <td className="text-xl font-medium py-8">
+                <span className="block w-max">EDUCATION</span>
+              </td>
             </tr>
             <tr>
               <td className="font-light align-top">1983</td>
