@@ -26,7 +26,7 @@ const Exhibitions = () => {
               </>
             }
           />
-          <Route path="/:exid" element={<Viewer />} />
+          <Route path="/:id" element={<Viewer routeId="exhibitions" />} />
         </Routes>
       </div>
     </>

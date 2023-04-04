@@ -34,7 +34,7 @@ const Work = () => {
               </div>
             }
           />
-          <Route path="/:id" element={<Viewer />}/>
+          <Route path="/:id" element={<Viewer routeId="work" />}/>
         </Routes>
       </div>
     </>
