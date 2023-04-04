@@ -19,8 +19,20 @@ const Exhibitions = () => {
             path="/"
             element={
               <>
-              <h1 className="text-3xl font-semibold pl-14 pb-8 mt-16">SIDESTEPS</h1>
-                <div className="row-start-2 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-center md:justify-start">
+                <div className="relative row-start-2 col-start-2 flex flex-wrap gap-16 py-16 mt-6 md:gap-4 w-full h-max justify-center text-left md:justify-start">
+                  <h1 className="text-3xl font-semibold absolute -top-4">SIDESTEPS</h1>
+                  {boxes}
+                </div>
+                <div className="relative row-start-3 col-start-2 flex flex-wrap gap-16 py-16 md:gap-4 w-full h-max justify-center text-left md:justify-start">
+                  <h1 className="text-3xl font-semibold absolute -top-4">TIME AFTER TIME</h1>
+                  {boxes}
+                </div>
+                <div className="relative row-start-4 col-start-2 flex flex-wrap gap-16 py-16 md:gap-4 w-full h-max justify-center text-left md:justify-start">
+                  <h1 className="text-3xl font-semibold absolute -top-4">PRECAUTION & LOSS</h1>
+                  {boxes}
+                </div>
+                <div className="relative row-start-5 col-start-2 flex flex-wrap gap-16 py-16 md:gap-4 w-full h-max justify-center text-left md:justify-start">
+                  <h1 className="text-3xl font-semibold absolute -top-4">COLONIES</h1>
                   {boxes}
                 </div>
               </>
