@@ -4,9 +4,10 @@ import { CarouselSquare } from "./CarouselSquare"
 
 interface CarouselProps {
   currentArt: Artwork
+  routeId: string
 }
 
-const CarouselDemo = ({ currentArt }: CarouselProps) => {
+const CarouselDemo = ({ currentArt, routeId }: CarouselProps) => {
   const [allArt, setAllArt] = useState<Artwork[]>()
   useEffect(() => {
     try {
@@ -25,7 +26,7 @@ const CarouselDemo = ({ currentArt }: CarouselProps) => {
           <CarouselSquare
             key={elem.id}
             id={elem.id}
-            to={`/work/${elem.id.toString()}`}
+            to={`/${routeId}/${elem.id.toString()}`}
             name={elem.name}
             date={elem.year}
             gallery={elem.gallery}
