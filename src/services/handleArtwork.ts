@@ -2,8 +2,8 @@ import { artwork } from "../public/demo_images.json"
 
 export interface Artwork {
   id: number
-  preview_img: URL | string
-  full_img: URL | string
+  preview_img: string
+  full_img: string
   description?: string
 }
 
