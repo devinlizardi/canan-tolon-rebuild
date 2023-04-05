@@ -6,7 +6,6 @@ import { Artwork, getAll } from "../services/handleArtwork"
 import { useEffect, useState } from "react"
 
 const Work = () => {
-  const [art, setArt] = useState<Artwork[]>()
   const [boxes, setBoxes] = useState<JSX.Element[]>([])
 
   useEffect(() => {
@@ -21,16 +20,19 @@ const Work = () => {
         />
       )
     })
+    for (let i = 5; i < 24; i++) {
+      temp.push(
+        <Square
+          key={i}
+          to={i.toString()}
+          preview_img=""
+          description="Untitled 8.3, 2013, oil on canvas, 36 x 24 (92 x 61 cm)"
+        />
+      )
+    }
     setBoxes(temp)
   }, [])
 
-  // const boxes = []
-  // for (let i = 0; i < 40; i++) {
-  //   boxes.push(
-  //     <Square key={i} to={i.toString()} description="Untitled 8.3, 2013, oil on canvas, 36 x 24 (92 x 61 cm)" />
-  //   )
-  // }
-  // console.log(boxes);
   return (
     <>
       <SimpleNavbar />

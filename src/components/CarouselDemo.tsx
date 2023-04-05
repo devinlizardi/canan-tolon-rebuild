@@ -25,6 +25,7 @@ const CarouselDemo = ({ currentArt, routeId }: CarouselProps) => {
         {allArt?.map((elem) => (
           <CarouselSquare
             key={elem.id}
+            preview_img={elem.preview_img}
             to={`/${routeId}/${elem.id.toString()}`}
             description={elem.description}
           />

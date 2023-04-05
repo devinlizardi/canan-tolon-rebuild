@@ -40,7 +40,7 @@ const Viewer = ({ routeId }: any) => {
                 </>
               )}
               {/* demo art */}
-              <div className="h-[35em] w-[30em] bg-contain bg-[#ccc]" />
+              <img src={art.full_img} className="min-h-[35em] max-h-40em w-auto max-w-[32em] relative justify-self-center bg-[#ccc]" />
               <span className="mt-1 text-center opacity-75 font-light">
                 <i>{art.description}</i>
               </span>
