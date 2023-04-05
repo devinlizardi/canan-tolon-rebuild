@@ -40,9 +40,9 @@ const Viewer = ({ routeId }: any) => {
                 </>
               )}
               {/* demo art */}
-              <div className="h-[35em] w-[30em] bg-[#ccc]" />
+              <div className="h-[35em] w-[30em] bg-contain bg-[#ccc]" />
               <span className="mt-1 text-center opacity-75 font-light">
-                <i>{art.name}</i>, {art.year}, {art.materials} {art.size}
+                <i>{art.description}</i>
               </span>
             </div>
           </div>

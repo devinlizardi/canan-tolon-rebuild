@@ -2,58 +2,33 @@
   "artwork": [
     {
       "id": 0,
-      "img": "",
-      "name": "Untitled",
-      "year": "2019",
-      "materials": "oil on canvas",
-      "size": "94 1/10 x 76 in | 239 x 193 cm",
-      "medium": "Painting",
-      "gallery": "Galeri Nev Istanbul",
-      "country": ""
+      "preview_img": "https://canantolon.b-cdn.net/demos/work/2013_Untitled_OilOnCanvas_8.3%20copy/SWN_Unt8_3_sl.jpg",
+      "full_img": "https://canantolon.b-cdn.net/demos/work/2013_Untitled_OilOnCanvas_8.3%20copy/2013_Untitled_OilOnCanvas_8.3.jpg",
+      "description": "Untitled 8.3, 2013, oil on canvas, 36\" x 24\" (92 x 61 cm)"
     },
     {
       "id": 1,
-      "img": "",
-      "name": "Untitled 1",
-      "year": "2019",
-      "materials": "oil on canvas",
-      "size": "94 1/10 x 76 in | 239 x 193 cm",
-      "medium": "Painting",
-      "gallery": "Galeri Nev Istanbul",
-      "country": ""
+      "preview_img": "",
+      "full_img": "",
+      "description": ""
     },
     {
       "id": 2,
-      "img": "",
-      "name": "Untitled 2",
-      "year": "2019",
-      "materials": "oil on canvas",
-      "size": "94 1/10 x 76 in | 239 x 193 cm",
-      "medium": "Painting",
-      "gallery": "Galeri Nev Istanbul",
-      "country": ""
+      "preview_img": "",
+      "full_img": "",
+      "description": ""
     },
     {
       "id": 3,
-      "img": "",
-      "name": "Untitled 3",
-      "year": "2019",
-      "materials": "oil on canvas",
-      "size": "94 1/10 x 76 in | 239 x 193 cm",
-      "medium": "Painting",
-      "gallery": "Galeri Nev Istanbul",
-      "country": ""
+      "preview_img": "",
+      "full_img": "",
+      "description": ""
     },
     {
       "id": 4,
-      "img": "",
-      "name": "Untitled 4",
-      "year": "2019",
-      "materials": "oil on canvas",
-      "size": "94 1/10 x 76 in | 239 x 193 cm",
-      "medium": "Painting",
-      "gallery": "Galeri Nev Istanbul",
-      "country": ""
+      "preview_img": "",
+      "full_img": "",
+      "description": ""
     }
   ],
   "exhibitions": [
@@ -63,17 +38,20 @@
       "squares": [
         {
           "id": 0,
-          "img": "",
+          "preview_img": "",
+          "full_img": "",
           "description": ""
         },
         {
           "id": 1,
-          "img": "",
+          "preview_img": "",
+          "full_img": "",
           "description": ""
         },
         {
           "id": 2,
-          "img": "",
+          "preview_img": "",
+          "full_img": "",
           "description": ""
         }
       ]
@@ -84,17 +62,20 @@
       "squares": [
         {
           "id": 0,
-          "img": "",
+          "preview_img": "",
+          "full_img": "",
           "description": ""
         },
         {
           "id": 1,
-          "img": "",
+          "preview_img": "",
+          "full_img": "",
           "description": ""
         },
         {
           "id": 2,
-          "img": "",
+          "preview_img": "",
+          "full_img": "",
           "description": ""
         }
       ]

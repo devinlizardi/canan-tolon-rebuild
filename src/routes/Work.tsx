@@ -10,11 +10,8 @@ const Work = () => {
     boxes.push(
       <Square
         key={i}
-        id={i}
         to={i.toString()}
-        name={"Untitled"}
-        date="2009"
-        gallery="Parasol unit foundation for contemporary art"
+        description="Untitled 8.3, 2013, oil on canvas, 36 x 24 (92 x 61 cm)"
       />
     )
   }

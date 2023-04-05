@@ -2,14 +2,11 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 interface CarouselSquareProps {
-  id: number
   to: string
-  name: string
-  date: string
-  gallery?: string
+  description?: string
 }
 
-const CarouselSquare = ({ id, to, name, date, gallery }: CarouselSquareProps) => {
+const CarouselSquare = ({ to, description }: CarouselSquareProps) => {
   const [hover, setHover] = useState(false)
 
   return (
@@ -22,9 +19,7 @@ const CarouselSquare = ({ id, to, name, date, gallery }: CarouselSquareProps) =>
         <Link to={to} className="h-full w-full p-6">
           {hover && (
             <div className="flex flex-col">
-              <span><i>{name}</i>, {date}</span>
-              <br />
-              <h2 className="opacity-75">{gallery}</h2>
+              <span>{description}</span>
             </div>
           )}
         </Link>
