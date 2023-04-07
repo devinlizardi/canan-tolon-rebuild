@@ -20,7 +20,7 @@ const Work = () => {
         />
       )
     })
-    for (let i = 5; i < 24; i++) {
+    for (let i = 9; i < 24; i++) {
       temp.push(
         <Square
           key={i}
@@ -36,14 +36,13 @@ const Work = () => {
   return (
     <>
       <SimpleNavbar />
-      <div className="m-0 w-full place-items-center justify-center grid grid-cols-[minmax(0,_50px)_minmax(auto,_40rem)_minmax(0,_50px)]">
-        <div className="row-start-1 col-start-2 h-4" />
-
+      <div className="m-0 place-content-center grid grid-cols-[auto_minmax(auto,_80rem)_auto]">
+      <div className="h-16"/>
         <Routes>
           <Route
             path="/"
             element={
-              <div className="row-start-2 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full h-max justify-evenly">
+              <div className=" justify-self-center row-start-2 col-start-2 flex flex-wrap gap-16 md:gap-4 w-full max-w-[40rem] h-max justify-evenly">
                 {boxes}
               </div>
             }

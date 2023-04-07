@@ -14,14 +14,14 @@ const CarouselSquare = ({ to, preview_img, description }: SquareProps) => {
     <>
       <Link
         to={to}
-        className="w-[150px] h-[150px] bg-[#ccc] grid place-content-center"
+        className="bg-[#ccc] grid place-content-center"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
       >
-        <div className="w-[150px] h-[150px] relative overflow-clip">
+        <div className="w-[75px] h-[75px] md:w-[150px] md:h-[150px] relative overflow-clip">
           <img className="w-full" src={preview_img} />
           {hover && (
-            <span className="backdrop-blur-sm absolute top-0 h-full px-4 pt-[calc(50%-3em)] text-center font-light italic text-white">
+            <span className="backdrop-blur-sm absolute top-0 h-full px-4 pt-[calc(50%-3em)] text-center text-xs md:text-base italic font-light text-white">
               {description}
             </span>
           )}

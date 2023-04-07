@@ -26,27 +26,35 @@ const Viewer = ({ routeId }: any) => {
       {art && (
         <>
           <div className="row-start-2 col-start-2 w-full h-full">
-            <div className="grid place-content-center relative">
-              {adjacentIds && (
-                <>
-                  <Link to={`/${routeId}/${adjacentIds[0].toString()}`} className="absolute top-[calc(50%-1.75rem)] left-0">
+            <div className="grid place-content-center">
+              
+              <div className="relative">
+                <img src={art.full_img} className="px-4 sm:px-10" />
+                {adjacentIds && (
+                <div className="z-30 ">
+                  <Link
+                    to={`/${routeId}/${adjacentIds[0].toString()}`}
+                    className="hidden sm:block absolute top-[calc(50%-1.25rem)] left-0"
+                  >
                     <span className="sr-only">previous</span>
                     <ChevronLeftIcon className="h-10 w-10 text-gray-300 hover:text-black" />
                   </Link>
-                  <Link to={`/${routeId}/${adjacentIds[1].toString()}`} className="absolute top-[calc(50%-1.75rem)] right-0">
+                  <Link
+                    to={`/${routeId}/${adjacentIds[1].toString()}`}
+                    className="hidden sm:block absolute top-[calc(50%-1.25rem)] right-0"
+                  >
                     <span className="sr-only">next</span>
                     <ChevronRightIcon className="h-10 w-10 text-gray-300 hover:text-black" />
                   </Link>
-                </>
+                </div>
               )}
-              {/* demo art */}
-              <img src={art.full_img} className="min-h-[35em] max-h-40em w-auto max-w-[32em] relative justify-self-center bg-[#ccc]" />
-              <span className="mt-1 text-center opacity-75 font-light">
-                <i>{art.description}</i>
-              </span>
+              </div>
             </div>
           </div>
-          <div className="mt-8 mb-16 row-start-3 col-start-2 w-full">
+          <span className="justify-self-center mt-4 mb-8 col-start-2 row-start-3 w-fit h-fit text-center px-10 italic font-light text-sm md:text-base">
+            {art.description}
+          </span>
+          <div className="justify-self-center mb-16 row-start-4 col-start-2 w-[75vw] max-w-4xl">
             <CarouselDemo currentArt={art} routeId={routeId} />
           </div>
         </>
