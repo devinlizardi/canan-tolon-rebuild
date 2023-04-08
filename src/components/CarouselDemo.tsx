@@ -21,15 +21,13 @@ const CarouselDemo = ({ currentArt, routeId }: CarouselProps) => {
 
   return (
     <>
-      <div className="flex gap-4 overflow-x-scroll overflow-y-clip scrollbar-hide">
+      <div className="flex gap-1 overflow-x-scroll overflow-y-clip pb-1 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
         {allArt?.map((elem) => (
           <CarouselSquare
             key={elem.id}
-            id={elem.id}
+            preview_img={elem.preview_img}
             to={`/${routeId}/${elem.id.toString()}`}
-            name={elem.name}
-            date={elem.year}
-            gallery={elem.gallery}
+            description={elem.description}
           />
         ))}
       </div>

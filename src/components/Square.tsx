@@ -2,40 +2,31 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 interface SquareProps {
-  id: number
   to: string
-  name: string
-  date: string
-  gallery?: string
+  preview_img: string
+  description: string
 }
 
-const Square = ({ to, name, date, gallery }: SquareProps) => {
+const Square = ({ to, preview_img, description }: SquareProps) => {
   const [hover, setHover] = useState(false)
 
   return (
     <>
-      <div
+      <Link
+        to={to}
         className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] bg-[#ccc] grid place-content-center"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
       >
-        <Link to={to} className="h-full w-full p-6">
+        <div className="w-[300px] h-[300px] md:w-[200px] md:h-[200px] relative overflow-clip">
+          <img className="w-full" src={preview_img} />
           {hover && (
-            <div className="flex flex-col">
-              <span><i>{name}</i>, {date}</span>
-              <br />
-              <h2 className="opacity-75">{gallery}</h2>
-            </div>
+            <span className="backdrop-blur-sm absolute top-0 h-full px-4 pt-[calc(50%-2em)] text-center font-light italic text-white">
+              {description}
+            </span>
           )}
-          {!hover && (
-            <div className="flex flex-col invisible">
-              <span><i>{name}</i>, {date}</span>
-              <br />
-              <h2 className="opacity-75">{gallery}</h2>
-            </div>
-          )}
-        </Link>
-      </div>
+        </div>
+      </Link>
     </>
   )
 }

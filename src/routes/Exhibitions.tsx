@@ -6,7 +6,9 @@ import { Viewer } from "../components/Viewer"
 const Exhibitions = () => {
   const boxes = []
   for (let i = 0; i < 3; i++) {
-    boxes.push(<Square key={i} id={i} to={i.toString()} name={"SIDESTEPS"} date="2014" gallery="" />)
+    boxes.push(
+      <Square key={i} to={i.toString()} preview_img="" description="Untitled 8.3, 2013, oil on canvas, 36 x 24 (92 x 61 cm)" />
+    )
   }
   return (
     <>
@@ -32,7 +34,7 @@ const Exhibitions = () => {
                   {boxes}
                 </div>
                 <div className="relative row-start-5 col-start-2 flex flex-wrap gap-16 py-16 md:gap-4 w-full h-max justify-center text-left md:justify-start">
-                  <h1 className="text-3xl font-semibold absolute -top-4">COLONIES</h1>
+                  <h1 className="text-3xl font-semibold absolute -top-4 hover:underline">COLONIES</h1>
                   {boxes}
                 </div>
               </>

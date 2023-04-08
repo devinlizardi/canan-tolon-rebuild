@@ -1,34 +1,32 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-interface CarouselSquareProps {
-  id: number
+interface SquareProps {
   to: string
-  name: string
-  date: string
-  gallery?: string
+  preview_img: string
+  description?: string
 }
 
-const CarouselSquare = ({ id, to, name, date, gallery }: CarouselSquareProps) => {
+const CarouselSquare = ({ to, preview_img, description }: SquareProps) => {
   const [hover, setHover] = useState(false)
 
   return (
     <>
-      <div
-        className="flex-none w-[150px] h-[150px] bg-[#ccc] grid place-content-center"
+      <Link
+        to={to}
+        className="bg-[#ccc] grid place-content-center"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
       >
-        <Link to={to} className="h-full w-full p-6">
+        <div className="w-[75px] h-[75px] md:w-[150px] md:h-[150px] relative overflow-clip">
+          <img className="w-full" src={preview_img} />
           {hover && (
-            <div className="flex flex-col">
-              <span><i>{name}</i>, {date}</span>
-              <br />
-              <h2 className="opacity-75">{gallery}</h2>
-            </div>
+            <span className="backdrop-blur-sm absolute top-0 h-full px-4 pt-[calc(50%-3em)] text-center text-xs md:text-base italic font-light text-white">
+              {description}
+            </span>
           )}
-        </Link>
-      </div>
+        </div>
+      </Link>
     </>
   )
 }
