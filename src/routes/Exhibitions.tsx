@@ -7,7 +7,7 @@ const Exhibitions = () => {
   const boxes = []
   for (let i = 0; i < 3; i++) {
     boxes.push(
-      <Square key={i} to={i.toString()} description="Untitled 8.3, 2013, oil on canvas, 36 x 24 (92 x 61 cm)" />
+      <Square key={i} to={i.toString()} preview_img="" description="Untitled 8.3, 2013, oil on canvas, 36 x 24 (92 x 61 cm)" />
     )
   }
   return (
