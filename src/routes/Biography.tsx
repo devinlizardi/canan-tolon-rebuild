@@ -4,7 +4,7 @@ const Biography = () => {
   return (
     <>
       <SimpleNavbar />
-      <div className="w-full grid place-content-center px-8">
+      <div className="w-full grid place-content-center px-8 selection:bg-black selection:text-white">
         <table className="w-full max-w-3xl xl:max-w-4xl lg:ml-40 h-fit mb-16 prose table-fixed">
           <tbody>
             <tr>
