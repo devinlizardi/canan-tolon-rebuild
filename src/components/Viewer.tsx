@@ -25,7 +25,7 @@ const Viewer = ({ routeId }: any) => {
     <>
       {art && (
         <>
-          <div className="row-start-2 col-start-2 w-full h-full">
+          <div className="row-start-2 col-start-2 w-full h-full ">
             <div className="grid place-content-center">
               
               <div className="relative">
@@ -51,7 +51,7 @@ const Viewer = ({ routeId }: any) => {
               </div>
             </div>
           </div>
-          <span className="justify-self-center mt-4 mb-8 col-start-2 row-start-3 w-fit h-fit text-center px-10 italic font-light text-sm md:text-base">
+          <span className="justify-self-center mt-4 mb-8 col-start-2 row-start-3 w-fit h-fit text-center px-10 italic font-light text-sm md:text-base selection:bg-black selection:text-white">
             {art.description}
           </span>
           <div className="justify-self-center mb-16 row-start-4 col-start-2 w-[75vw] max-w-4xl">

@@ -36,7 +36,7 @@ const Work = () => {
   return (
     <>
       <SimpleNavbar />
-      <div className="m-0 place-content-center grid grid-cols-[auto_minmax(auto,_80rem)_auto]">
+      <div className="m-0 place-content-center grid grid-cols-[auto_minmax(auto,_80rem)_auto] selection:bg-black selection:text-white">
       <div className="h-16"/>
         <Routes>
           <Route

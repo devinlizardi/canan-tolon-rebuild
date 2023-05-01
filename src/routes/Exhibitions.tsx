@@ -13,8 +13,8 @@ const Exhibitions = () => {
   return (
     <>
       <SimpleNavbar />
-      <div className="w-full place-content-center grid grid-cols-[minmax(0,_50px)_minmax(auto,_40rem)_minmax(0,_50px)]">
-        <div className="row-start-1 col-start-2 h-4" />
+      <div className="w-full place-content-center grid grid-cols-[minmax(0,_50px)_minmax(auto,_40rem)_minmax(0,_50px)] selection:bg-black selection:text-white">
+        <div className="row-start-1 col-start-2 h-4 " />
 
         <Routes>
           <Route

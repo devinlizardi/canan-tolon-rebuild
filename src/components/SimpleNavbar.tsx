@@ -2,24 +2,32 @@ import { NavLink } from "react-router-dom"
 import { Disclosure } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
-const activeClassName = "text-[#4d4d4d] px-1 py-0 text-md font-bold uppercase ring-4 ring-red-300"
-const passiveClassName = "text-[#4d4d4d] px-1 py-0 text-md font-bold uppercase hover:ring-4 hover:ring-red-300"
+const baseActiveClass = "px-1"
 
-const navigation = [
-  { name: "canantolon", href: "/" },
-  { name: "work", href: "/work" },
-  { name: "biography", href: "/biography" },
-  { name: "exhibitions", href: "/exhibitions" },
-  { name: "publications", href: "/publications" },
-  { name: "contact", href: "/contact" },
+const baseNavInfo = [
+  { name: "canan tolon", color: "ring-red-300" },
+  { name: "work", color: "ring-orange-300" },
+  { name: "biography", color: "ring-yellow-300" },
+  { name: "exhibitions", color: "ring-purple-300" },
+  { name: "publications", color: "ring-blue-300" },
+  { name: "contact", color: "ring-green-300" },
 ]
+
+const navigation = baseNavInfo.map((elem) => {
+  return {
+    name: elem.name,
+    href: elem.name === "canan tolon" ? "/" : `/${elem.name}`,
+    activeClassName: baseActiveClass + ` ring-4 ${elem.color}`,
+    passiveClassName: baseActiveClass + ` ring-0 ${elem.color} hover:ring-4`,
+  }
+})
 
 function SimpleNavbar() {
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8 selection:bg-black selection:text-white">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
@@ -34,12 +42,12 @@ function SimpleNavbar() {
               </div>
               <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-center">
                 <div className="hidden md:ml-6 md:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 text-[#4d4d4d] px-1 py-0 text-md font-bold uppercase">
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className={({ isActive }) => (isActive ? activeClassName : passiveClassName)}
+                        className={({ isActive }) => (isActive ? item.activeClassName : item.passiveClassName)}
                       >
                         {item.name}
                       </NavLink>
@@ -51,12 +59,12 @@ function SimpleNavbar() {
           </div>
 
           <Disclosure.Panel className="md:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3 flex flex-col">
+            <div className="space-y-1 pt-2 pb-3 mx-2 flex flex-col text-[#4d4d4d] text-md font-bold uppercase">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
-                  className={({ isActive }) => (isActive ? activeClassName : passiveClassName)}
+                  className={({ isActive }) => (isActive ? item.activeClassName : item.passiveClassName)}
                 >
                   {item.name}
                 </NavLink>

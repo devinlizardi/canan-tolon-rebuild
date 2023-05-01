@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { HomeLink } from "./../components/HomeLink"
 import bg from "./../public/homepage/BG.png"
+import mobile from "./../public/homepage/phone/iphone_color.jpg"
 import canan from "./../public/homepage/canan.png"
 import tolon from "./../public/homepage/tolon.png"
 import hoverWorkGrey from "./../public/homepage/work1.png"
@@ -19,6 +20,7 @@ import hoverNsGrey from "./../public/homepage/ns1.png"
 import hoverNsColor from "./../public/homepage/ns2.png"
 import hoverContactGrey from "./../public/homepage/contact1.png"
 import hoverContactColor from "./../public/homepage/contact2.png"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const [workHover, setWorkHover] = useState(false)
@@ -44,85 +46,16 @@ const Home = () => {
         grid-rows-[1fr,_min-content,_1fr]"
       >
         {/* mobile */}
-        <div className="md:hidden relative row-start-2 col-start-2 w-[362px] min-[565px]:w-[483px] h-fit">
-          <img src={bg} className="h-[859px] w-full object-cover" alt="mobile hero" />
-          <div className="absolute top-0 z-10 w-full h-full">
-            <div className="w-auto h-[6.6%] flex justify-between relative -left-1 top-4">
-              <img src={canan} />
-              <img src={tolon} className="hidden min-[565px]:block" />
-            </div>
-            <HomeLink
-              className="w-auto h-[10%] relative top-8"
-              hover={workHover}
-              handleMouseOver={() => handleMouseOver(setWorkHover)}
-              handleMouseOut={() => handleMouseOut(setWorkHover)}
-              grey={hoverWorkGrey}
-              color={hoverWorkColor}
-              to="/work"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-12 float-right"
-              hover={bioHover}
-              handleMouseOver={() => handleMouseOver(setBioHover)}
-              handleMouseOut={() => handleMouseOut(setBioHover)}
-              grey={hoverBioGrey}
-              color={hoverBioColor}
-              to="/biography"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-12"
-              hover={bioHover}
-              handleMouseOver={() => handleMouseOver(setBioHover)}
-              handleMouseOut={() => handleMouseOut(setBioHover)}
-              grey={hoverGraphyGrey}
-              color={hoverGraphyColor}
-              to="/biography"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-16"
-              hover={exhibitHover}
-              handleMouseOver={() => handleMouseOver(setExhibitHover)}
-              handleMouseOut={() => handleMouseOut(setExhibitHover)}
-              grey={hoverExGrey}
-              color={hoverExColor}
-              to="/exhibitions"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-16 float-right"
-              hover={exhibitHover}
-              handleMouseOver={() => handleMouseOver(setExhibitHover)}
-              handleMouseOut={() => handleMouseOut(setExhibitHover)}
-              grey={hoverHibitionsGrey}
-              color={hoverHibitionsColor}
-              to="/exhibitions"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-20"
-              hover={publicationsHover}
-              handleMouseOver={() => handleMouseOver(setPublicationsHover)}
-              handleMouseOut={() => handleMouseOut(setPublicationsHover)}
-              grey={hoverPublicatioGrey}
-              color={hoverPublicatioColor}
-              to="/publications"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-20 float-right"
-              hover={publicationsHover}
-              handleMouseOver={() => handleMouseOver(setPublicationsHover)}
-              handleMouseOut={() => handleMouseOut(setPublicationsHover)}
-              grey={hoverNsGrey}
-              color={hoverNsColor}
-              to="/publications"
-            />
-            <HomeLink
-              className="w-auto h-[10%] relative top-24"
-              hover={contactHover}
-              handleMouseOver={() => handleMouseOver(setContactHover)}
-              handleMouseOut={() => handleMouseOut(setContactHover)}
-              grey={hoverContactGrey}
-              color={hoverContactColor}
-              to="/contact"
-            />
+        <div className="md:hidden relative row-start-2 col-start-2">
+          <img src={mobile} className=" min-w-[320px]" alt="mobile hero" />
+          <div className="absolute w-full h-full top-0">
+            <Link to={"/work"} className="absolute top-[72px] right-0 w-[290px] h-[68px]"/>
+            <Link to={"/biography"} className="absolute top-[148px] left-0 w-[180px] h-[68px] "/>
+            <Link to={"/biography"} className="absolute top-[225px] left-0 w-[390px] h-[68px] "/>
+            <Link to={"/exhibitions"} className="absolute top-[303px] right-0 w-[410px] h-[68px] "/>
+            <Link to={"/exhibitions"} className="absolute top-[388px] right-0 w-[290px] h-[73px] "/>
+            <Link to={"/publications"} className="absolute top-[468px] right-0 w-[450px] h-[153px] "/>
+            <Link to={"/contact"} className="absolute top-[635px] right-0 w-[460px] h-[70px] "/>
           </div>
         </div>
 

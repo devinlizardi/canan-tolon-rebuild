@@ -4,7 +4,7 @@ const Biography = () => {
   return (
     <>
       <SimpleNavbar />
-      <div className="w-full grid place-content-center px-8">
+      <div className="w-full grid place-content-center px-8 selection:bg-black selection:text-white">
         <table className="w-full max-w-3xl xl:max-w-4xl lg:ml-40 h-fit mb-16 prose table-fixed">
           <tbody>
             <tr>
@@ -225,8 +225,13 @@ const Biography = () => {
             <tr>
               <td className="font-light align-top">2014</td>
               <td>
-                In Black and White… and Colors, Gallery Paule Anglim, San Francisco Poetry and Exile from the permanent
-                collection, British Museum, London, England
+                "In Black and White… and Colors," Gallery Paule Anglim, San Francisco
+              </td>
+            </tr>
+            <tr>
+              <td className="font-light align-top"></td>
+              <td>
+                "Poetry and Exile" from the permanent collection, British Museum, London, England
               </td>
             </tr>
 
