@@ -2,17 +2,25 @@ import { NavLink } from "react-router-dom"
 import { Disclosure } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
-const activeClassName = "text-[#4d4d4d] px-1 py-0 text-md font-bold uppercase ring-4 ring-red-300"
-const passiveClassName = "text-[#4d4d4d] px-1 py-0 text-md font-bold uppercase hover:ring-4 hover:ring-red-300"
+const baseActiveClass = "text-[#4d4d4d] px-1 py-0 text-md font-bold uppercase ring-4"
 
-const navigation = [
-  { name: "canantolon", href: "/" },
-  { name: "work", href: "/work" },
-  { name: "biography", href: "/biography" },
-  { name: "exhibitions", href: "/exhibitions" },
-  { name: "publications", href: "/publications" },
-  { name: "contact", href: "/contact" },
+const baseNavInfo = [
+  { name: "canan tolon", color: "red-300" },
+  { name: "work", color: "orange-300" },
+  { name: "biography", color: "yellow-300" },
+  { name: "exhibitions", color: "purple-300" },
+  { name: "publications", color: "blue-600" },
+  { name: "contact", color: "green-300" },
 ]
+
+const navigation = baseNavInfo.map((elem) => {
+  return {
+    name: elem.name,
+    href: elem.name === "canan tolon" ? "/" : `/${elem.name}`,
+    activeClassName: baseActiveClass + ` ring-${elem.color}`,
+    passiveClassName: baseActiveClass + ` ring-0 hover:ring-${elem.color} hover:ring-4`,
+  }
+})
 
 function SimpleNavbar() {
   return (
@@ -39,7 +47,7 @@ function SimpleNavbar() {
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className={({ isActive }) => (isActive ? activeClassName : passiveClassName)}
+                        className={({ isActive }) => (isActive ? item.activeClassName : item.passiveClassName)}
                       >
                         {item.name}
                       </NavLink>
@@ -56,7 +64,7 @@ function SimpleNavbar() {
                 <NavLink
                   key={item.name}
                   to={item.href}
-                  className={({ isActive }) => (isActive ? activeClassName : passiveClassName)}
+                  className={({ isActive }) => (isActive ? item.activeClassName : item.passiveClassName)}
                 >
                   {item.name}
                 </NavLink>
