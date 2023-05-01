@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { HomeLink } from "./../components/HomeLink"
 import bg from "./../public/homepage/BG.png"
-import mobile from "./../public/homepage/phone/IPHONE.jpg"
+import mobile from "./../public/homepage/phone/iphone_color.jpg"
 import canan from "./../public/homepage/canan.png"
 import tolon from "./../public/homepage/tolon.png"
 import hoverWorkGrey from "./../public/homepage/work1.png"
@@ -20,6 +20,7 @@ import hoverNsGrey from "./../public/homepage/ns1.png"
 import hoverNsColor from "./../public/homepage/ns2.png"
 import hoverContactGrey from "./../public/homepage/contact1.png"
 import hoverContactColor from "./../public/homepage/contact2.png"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const [workHover, setWorkHover] = useState(false)
@@ -47,7 +48,15 @@ const Home = () => {
         {/* mobile */}
         <div className="md:hidden relative row-start-2 col-start-2">
           <img src={mobile} className=" min-w-[320px]" alt="mobile hero" />
-          
+          <div className="absolute w-full h-full top-0">
+            <Link to={"/work"} className="absolute top-[72px] right-0 w-[290px] h-[68px]"/>
+            <Link to={"/biography"} className="absolute top-[148px] left-0 w-[180px] h-[68px] "/>
+            <Link to={"/biography"} className="absolute top-[225px] left-0 w-[390px] h-[68px] "/>
+            <Link to={"/exhibitions"} className="absolute top-[303px] right-0 w-[410px] h-[68px] "/>
+            <Link to={"/exhibitions"} className="absolute top-[388px] right-0 w-[290px] h-[73px] "/>
+            <Link to={"/publications"} className="absolute top-[468px] right-0 w-[450px] h-[153px] "/>
+            <Link to={"/contact"} className="absolute top-[635px] right-0 w-[460px] h-[70px] "/>
+          </div>
         </div>
 
         {/* desktop */}
