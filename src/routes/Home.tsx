@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { HomeLink } from "./../components/HomeLink"
 import bg from "./../public/homepage/BG.png"
-import mobile from "./../public/homepage/phone/iphone_color.jpg"
+import mobile from "./../public/homepage/phone/iphone-background.jpeg"
 import canan from "./../public/homepage/canan.png"
 import tolon from "./../public/homepage/tolon.png"
 import hoverWorkGrey from "./../public/homepage/work1.png"
@@ -39,16 +39,10 @@ const Home = () => {
 
   return (
     <>
-      <div
-        className="m-0 w-full min-h-screen h-full
-        place-items-center justify-center gap-4 grid 
-        grid-cols-[minmax(0,_20px)_minmax(auto,_60rem)_minmax(0,_20px)] 
-        grid-rows-[1fr,_min-content,_1fr]"
-      >
-        {/* mobile */}
-        <div className="md:hidden relative row-start-2 col-start-2">
-          <img src={mobile} className=" min-w-[320px]" alt="mobile hero" />
-          <div className="absolute w-full h-full top-0">
+      {/* mobile */}
+      <div className="md:hidden grid place-content-center p-4 w-screen h-screen">
+          <div className="w-full h-full">
+          <img src={mobile} className="" alt="mobile hero" />
             <Link to={"/work"} className="absolute top-[72px] right-0 w-[290px] h-[68px]"/>
             <Link to={"/biography"} className="absolute top-[148px] left-0 w-[180px] h-[68px] "/>
             <Link to={"/biography"} className="absolute top-[225px] left-0 w-[390px] h-[68px] "/>
@@ -59,6 +53,12 @@ const Home = () => {
           </div>
         </div>
 
+      <div
+        className="hidden md:grid m-0 w-full min-h-screen h-full
+        place-items-center justify-center gap-4 
+        grid-cols-[minmax(0,_20px)_minmax(auto,_60rem)_minmax(0,_20px)] 
+        grid-rows-[1fr,_min-content,_1fr]"
+      >
         {/* desktop */}
         <div className="relative hidden md:block row-start-2 col-start-2 w-fit h-fit">
           <img src={bg} alt="mobile hero" />
